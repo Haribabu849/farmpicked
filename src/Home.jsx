@@ -12,6 +12,8 @@ function Home() {
       <p onClick={() => navigate("/cartpage")}>cart page</p>
       <SingleProduct {...productOne} />
       <SingleProduct {...productTwo} />
+      <SingleProduct {...AllProducts[2]} />
+      <SingleProduct {...AllProducts[3]} />
     </div>
   );
 }

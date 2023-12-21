@@ -48,7 +48,7 @@ function SingleProduct({ category, itemName, discount, priceInDollars }) {
           </p>
           <p>{itemName}</p>
         </div>
-        {!overallCount[index2].count ? (
+        {!overallCount[index]?.count ? (
           <span
             className="text-center bg-sky-400 mx-auto block max-w-[150px] rounded-full p-1 uppercase mt-2 hover:cursor-pointer"
             onClick={() => {
