@@ -4,6 +4,8 @@ import About from "./About";
 import FAQ from "./FAQ";
 import Contact from "./Contact";
 import TermsAndConditions from "./TermsAndConditions";
+import ProductPage from "./components/ProductPage";
+import CartPage from "./CartPage";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Route path="FAQ" element={<FAQ />} />
       <Route path="contact" element={<Contact />} />
       <Route path="termsandconditions" element={<TermsAndConditions />} />
+      <Route path="productpage/:id" element={<ProductPage />} />
+      <Route path="cartpage" element={<CartPage />} />
     </Routes>
   );
 }
