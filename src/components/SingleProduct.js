@@ -29,7 +29,7 @@ function SingleProduct({ category, itemName, discount, priceInDollars }) {
             <img
               src={`./${category}/${itemName}.jpg`}
               alt={itemName}
-              className="object-contain h-full mx-auto"
+              className="object-contain h-full mx-auto "
             />
           </div>
 
@@ -109,10 +109,10 @@ function SingleProduct({ category, itemName, discount, priceInDollars }) {
           </p>
         )}
         <p>
-          {(priceInDollars * 75 * (1 - discount)).toFixed(2)}{" "}
+          {parseInt(priceInDollars * 75 * (1 - discount))}{" "}
           {discount && (
             <span className=" line-through decoration-pink-400">
-              {(priceInDollars * 75).toFixed(2)}
+              {parseInt(priceInDollars * 75)}
             </span>
           )}
         </p>
