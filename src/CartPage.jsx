@@ -10,6 +10,9 @@ import {
 function CartPage() {
   const cartItems = useSelector((store) => store.cartItems);
   const dispatch = useDispatch();
+  const total = cartItems.slice().reduce((acc, curr) => {
+    return acc + curr.count;
+  }, 0);
   console.log(cartItems);
   return (
     <div>
@@ -42,6 +45,7 @@ function CartPage() {
         );
       })}
       <button onClick={() => dispatch(clearItem())}>clear</button>
+      <p>{total}</p>
     </div>
   );
 }
