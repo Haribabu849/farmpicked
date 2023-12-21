@@ -2,7 +2,7 @@ import { createStore } from "redux";
 
 const initialState = {
   totalCartValue: 0,
-  cartItems: [{ itemName: "apple", count: 2 }],
+  cartItems: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -13,28 +13,10 @@ const reducer = (state = initialState, action) => {
     return { ...state, totalCartValue: state.totalCartValue - 1 };
   }
   if (action.type === "ADD_CART_ITEM") {
-    const x = function () {
-      const a = state.cartItems.findIndex((e) => {
-        return e.itemName === action.payload.cartItem.itemName;
-      });
-      return a;
+    return {
+      ...state,
+      cartItems: [...state.cartItems, action.payload.cartItem],
     };
-    const y = x();
-    if (y !== -1) {
-      return {
-        ...state,
-        cartItems: state.cartItems.map((e) => {
-          return e.itemName === action.payload.cartItem.itemName
-            ? { ...e, count: e.count + 1 }
-            : e;
-        }),
-      };
-    } else {
-      return {
-        ...state,
-        cartItems: [...state.cartItems, action.payload.cartItem],
-      };
-    }
   }
   if (action.type === "REMOVE_ITEM") {
     return {
