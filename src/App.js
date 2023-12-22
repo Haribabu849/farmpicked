@@ -13,7 +13,7 @@ function App() {
   return (
     <section>
       <Navbar />
-      <div className="max-w-[90%] mx-auto md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mt-24">
+      <div className="max-w-[90%] mx-auto md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mt-24 scroll-smooth">
         <Routes>
           <Route path="/" element={<Home2 />} />
           <Route path="about" element={<About />} />

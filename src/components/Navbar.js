@@ -11,7 +11,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <nav className="flex justify-between items-center fixed w-[100%] left-0 top-2 lg:hidden border-b-2 pl-2 pr-2 pb-2 shadow-sm shadow-pink-500 ">
+    <nav className="flex justify-between items-center fixed w-[100%] left-0 top-0 pt-2 lg:hidden border-b-2 pl-2 pr-2 pb-2 shadow-sm shadow-pink-500 z-50 bg-white">
       <div className="flex space-x-4 items-center">
         <div onClick={() => setToggleMenu((prevState) => !prevState)}>
           {toggleMenu ? (
