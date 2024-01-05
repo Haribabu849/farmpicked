@@ -9,7 +9,7 @@ import {
   removeItem,
 } from "../Store";
 
-function SingleProduct({ category, itemName, discount, priceInDollars }) {
+function SingleProduct2({ category, itemName, discount, priceInDollars }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const overallCount = useSelector((store) => store.cartItems);
@@ -32,7 +32,7 @@ function SingleProduct({ category, itemName, discount, priceInDollars }) {
         >
           <div className="w-full h-52 mt-4">
             <img
-              src={`./${category}/${itemName}.jpg`}
+              src={`../${category}/${itemName}.jpg`}
               alt={itemName}
               className="object-contain h-full mx-auto "
             />
@@ -110,7 +110,7 @@ function SingleProduct({ category, itemName, discount, priceInDollars }) {
       >
         <div className="w-full h-52 mt-4">
           <img
-            src={`./${category}/${itemName}.jpg`}
+            src={`../${category}/${itemName}.jpg`}
             alt={itemName}
             className="object-contain h-full mx-auto"
           />
@@ -175,4 +175,4 @@ function SingleProduct({ category, itemName, discount, priceInDollars }) {
   );
 }
 
-export default SingleProduct;
+export default SingleProduct2;
